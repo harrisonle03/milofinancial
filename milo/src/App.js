@@ -1,20 +1,19 @@
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { Sidebar } from "./components/Sidebar";
+import { ThemeProvider } from "@material-tailwind/react";
+import Dashboard from "./pages/Dashboard";
 
-const theme = extendTheme({
-  colors: {
-    brand: {
-      100: "#f7fafc",
-      // ...
-      900: "#1a202c",
-    },
-  },
-})
 
 function App() {
+  const customTheme = {
+    list: {
+      color: "white"
+    }
+  };
   return (
-    <ChakraProvider theme={theme}>
-      <h1>Hello Milo!!</h1>
-    </ChakraProvider>
+    <ThemeProvider value={customTheme}>
+      <Sidebar />
+      <Dashboard />
+    </ThemeProvider>
   );
 }
 
