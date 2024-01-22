@@ -9,7 +9,8 @@ import {
    
   const chartConfig = {
     type: "line",
-    height: 240,
+    height: 400,
+    width: 1000,
     series: [
       {
         name: "Sales",
@@ -52,15 +53,11 @@ import {
           },
         },
         categories: [
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
         ],
       },
       yaxis: {
@@ -105,9 +102,6 @@ import {
           color="transparent"
           className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
         >
-          <div className="w-max rounded-lg bg-gray-900 p-5 text-white">
-            <CurrencyDollarIcon className="h-6 w-6" />
-          </div>
           <div>
             <Typography variant="h4" color="blue-gray">
                 All Transaction History
