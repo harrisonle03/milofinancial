@@ -9,8 +9,8 @@ import {
    
   const chartConfig = {
     type: "pie",
-    width: 280,
-    height: 280,
+    width: 100,
+    height: 100,
     series: [44, 55, 13, 43, 22],
     options: {
       chart: {

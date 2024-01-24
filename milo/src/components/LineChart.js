@@ -9,12 +9,12 @@ import {
    
   const chartConfig = {
     type: "line",
-    height: 400,
-    width: 1000,
+    height: 240,
+    width: 800,
     series: [
       {
         name: "Sales",
-        data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+        data: [50, 40, 300, 320, 500, 350, 200],
       },
     ],
     options: {
@@ -58,6 +58,8 @@ import {
           "Wednesday",
           "Thursday",
           "Friday",
+          "Saturday",
+          "Sunday",
         ],
       },
       yaxis: {

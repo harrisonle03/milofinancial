@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AppProvider } from './AppProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className="flex items-center p-4 gap-4">
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </div>
 );
 

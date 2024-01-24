@@ -10,7 +10,7 @@ export default function InfoCard(props) {
   const { title, amount, change, changePercentage } = props;
 
   return (
-    <Card className="mt-6 w-96 bg-gray-200">
+    <Card className="mt-6 w-full bg-gray-200">
       <CardBody>
         <Typography variant="h4" color="blue-gray" className="mb-2">
           {title}
