@@ -1,7 +1,5 @@
 import React from 'react'
 import Expenses from '../components/Expenses'
-import CSVReaderComponent from '../components/CSVReader'
-
 import {
   Card,
   CardHeader,
@@ -14,7 +12,6 @@ export default function Transactions() {
     <Card className='h-[calc(100vh-2rem)] w-full max-w-[96rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-white'>
       <Typography variant="h2" color="black">Transaction History</Typography>
       <Expenses />
-      <CSVReaderComponent />
     </Card>  
     )
 }

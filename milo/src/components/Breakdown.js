@@ -33,7 +33,7 @@ import {
    
   export default function Breakdown() {
     return (
-      <Card className="bg-gray-200">
+      <Card className="bg-[#1F2833]">
         <CardHeader
           floated={false}
           shadow={false}

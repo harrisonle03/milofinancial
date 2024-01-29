@@ -21,10 +21,10 @@ import { Link, Outlet } from "react-router-dom"
  
 export default function Sidebar() {
   return (
-    <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+    <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-[#1F2833]">
       <div className="mb-2 flex items-center gap-4 p-4">
         <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Shiba_Inu_coin_logo.png" alt="brand" className="h-8 w-8" />
-        <Typography variant="h3" color="blue-gray">
+        <Typography variant="h3" color="cyan">
           Milo Financial
         </Typography>
       </div>

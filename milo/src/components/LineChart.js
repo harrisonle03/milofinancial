@@ -9,8 +9,6 @@ import {
    
   const chartConfig = {
     type: "line",
-    height: 240,
-    width: 800,
     series: [
       {
         name: "Sales",
@@ -97,7 +95,7 @@ import {
    
   export default function LineChart() {
     return (
-      <Card className="bg-gray-200">
+      <Card className="bg-[#1F2833]">
         <CardHeader
           floated={false}
           shadow={false}

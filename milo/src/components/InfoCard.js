@@ -10,17 +10,17 @@ export default function InfoCard(props) {
   const { title, amount, change, changePercentage } = props;
 
   return (
-    <Card className="mt-6 w-full bg-gray-200">
+    <Card className="w-full bg-[#1F2833]">
       <CardBody>
-        <Typography variant="h4" color="blue-gray" className="mb-2">
+        <Typography variant="h4" color="cyan" className="mb-2">
           {title}
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="h6" color="white">
           {`$${Math.abs(amount)}`}
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Typography>
+        <Typography color="white">
           {`${change >= 0 ? 'Up' : 'Down'} $${Math.abs(change)} (${changePercentage}%) From Last Month`}
         </Typography>
       </CardFooter>
