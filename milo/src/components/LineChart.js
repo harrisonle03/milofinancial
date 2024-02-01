@@ -27,10 +27,9 @@ import {
       dataLabels: {
         enabled: false,
       },
-      colors: ["#020617"],
+      colors: ["#00FFFF"],
       stroke: {
         lineCap: "round",
-        curve: "smooth",
       },
       markers: {
         size: 0,
@@ -44,7 +43,7 @@ import {
         },
         labels: {
           style: {
-            colors: "#616161",
+            colors: "#FFFFFF",
             fontSize: "12px",
             fontFamily: "inherit",
             fontWeight: 400,
@@ -63,7 +62,7 @@ import {
       yaxis: {
         labels: {
           style: {
-            colors: "#616161",
+            colors: "#FFFFFF",
             fontSize: "12px",
             fontFamily: "inherit",
             fontWeight: 400,
@@ -71,21 +70,17 @@ import {
         },
       },
       grid: {
-        show: true,
-        borderColor: "#dddddd",
-        strokeDashArray: 5,
+        show: false,
+        borderColor: "#FFFFFF",
+        strokeDashArray: 15,
         xaxis: {
           lines: {
             show: true,
           },
         },
-        padding: {
-          top: 5,
-          right: 20,
-        },
       },
       fill: {
-        opacity: 0.8,
+        opacity: 1,
       },
       tooltip: {
         theme: "dark",
@@ -100,11 +95,11 @@ import {
           floated={false}
           shadow={false}
           color="transparent"
-          className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
+          className="flex flex-col gap-2 rounded-none md:flex-row md:items-center"
         >
           <div>
-            <Typography variant="h4" color="blue-gray">
-                All Transaction History
+            <Typography variant="h3" color="white">
+                Spending History
             </Typography>
           </div>
         </CardHeader>

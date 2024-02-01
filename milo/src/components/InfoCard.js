@@ -12,10 +12,10 @@ export default function InfoCard(props) {
   return (
     <Card className="w-full bg-[#1F2833]">
       <CardBody>
-        <Typography variant="h4" color="cyan" className="mb-2">
+        <Typography variant="h3" color="cyan" className="mb-2">
           {title}
         </Typography>
-        <Typography variant="h6" color="white">
+        <Typography variant="h4" color="white">
           {`$${Math.abs(amount)}`}
         </Typography>
       </CardBody>

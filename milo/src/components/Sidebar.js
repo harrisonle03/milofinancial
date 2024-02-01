@@ -22,15 +22,17 @@ import { Link, Outlet } from "react-router-dom"
 export default function Sidebar() {
   return (
     <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-[#1F2833]">
+      <Link to="/">
       <div className="mb-2 flex items-center gap-4 p-4">
         <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Shiba_Inu_coin_logo.png" alt="brand" className="h-8 w-8" />
         <Typography variant="h3" color="cyan">
           Milo Financial
         </Typography>
       </div>
+      </Link>
       <List>
         <Link to="/Dashboard">
-          <ListItem>
+          <ListItem className="text-white">
             <ListItemPrefix>
               <PresentationChartBarIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -38,32 +40,32 @@ export default function Sidebar() {
           </ListItem>
         </Link>
         <Link to="/Transactions">
-          <ListItem>
+          <ListItem className="text-white">
             <ListItemPrefix>
               <ShoppingBagIcon className="h-5 w-5" />
             </ListItemPrefix>
             Transactions
           </ListItem>
         </Link>
-        <ListItem>
+        <ListItem className="text-white">
           <ListItemPrefix>
             <InboxIcon className="h-5 w-5" />
           </ListItemPrefix>
           Expenses
         </ListItem>
-        <ListItem>
+        <ListItem className="text-white">
           <ListItemPrefix>
             <UserCircleIcon className="h-5 w-5" />
           </ListItemPrefix>
           Income
         </ListItem>
-        <ListItem>
+        <ListItem className="text-white">
           <ListItemPrefix>
             <Cog6ToothIcon className="h-5 w-5" />
           </ListItemPrefix>
           Profile
         </ListItem>
-        <ListItem>
+        <ListItem className="text-white">
           <ListItemPrefix>
             <ArrowUpCircleIcon className="h-5 w-5" />
           </ListItemPrefix>

@@ -5,12 +5,11 @@ import {
     Typography,
   } from "@material-tailwind/react";
   import Chart from "react-apexcharts";
-  import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
-   
+
   const chartConfig = {
     type: "pie",
-    width: 100,
-    height: 100,
+    width: 400,
+    height: 400,
     series: [44, 55, 13, 43, 22],
     options: {
       chart: {
@@ -19,14 +18,14 @@ import {
         },
       },
       title: {
-        show: "",
+        show: "Hello",
       },
       dataLabels: {
         enabled: false,
       },
       colors: ["#020617", "#ff8f00", "#00897b", "#1e88e5", "#d81b60"],
       legend: {
-        show: false,
+        show: true,
       },
     },
   };
@@ -38,15 +37,13 @@ import {
           floated={false}
           shadow={false}
           color="transparent"
-          className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
+          className=""
         >
-          <div>
-            <Typography variant="h4" color="blue-gray">
-              Spending Breakdown Report
-            </Typography>
-          </div>
+        <Typography variant="h3" color="white">
+          Spending Breakdown Report
+        </Typography>
         </CardHeader>
-        <CardBody className="mt-4 grid place-items-center px-2">
+        <CardBody className="flex items-center justify-center">
           <Chart {...chartConfig} />
         </CardBody>
       </Card>
