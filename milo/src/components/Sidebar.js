@@ -25,9 +25,9 @@ export default function Sidebar() {
       <Link to="/">
       <div className="mb-2 flex items-center gap-4 p-4">
         <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Shiba_Inu_coin_logo.png" alt="brand" className="h-8 w-8" />
-        <Typography variant="h3" color="cyan">
+        <h1 className="text-cyan-200 text-3xl font-bold">
           Milo Financial
-        </Typography>
+        </h1>
       </div>
       </Link>
       <List>

@@ -12,17 +12,17 @@ export default function InfoCard(props) {
   return (
     <Card className="w-full bg-[#1F2833]">
       <CardBody>
-        <Typography variant="h3" color="cyan" className="mb-2">
+        <p className="mb-2 text-cyan-200 text-2xl font-bold">
           {title}
-        </Typography>
-        <Typography variant="h4" color="white">
+        </p>
+        <p className="text-white text-base">
           {`$${Math.abs(amount)}`}
-        </Typography>
+        </p>
       </CardBody>
       <CardFooter className="pt-0">
-        <Typography color="white">
+        <p className="text-white">
           {`${change >= 0 ? 'Up' : 'Down'} $${Math.abs(change)} (${changePercentage}%) From Last Month`}
-        </Typography>
+        </p>
       </CardFooter>
     </Card>
   );

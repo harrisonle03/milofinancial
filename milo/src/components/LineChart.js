@@ -98,12 +98,12 @@ import {
           className="flex flex-col gap-2 rounded-none md:flex-row md:items-center"
         >
           <div>
-            <Typography variant="h3" color="white">
+            <h1 className="text-2xl text-cyan-200 font-bold">
                 Spending History
-            </Typography>
+            </h1>
           </div>
         </CardHeader>
-        <CardBody className="px-2 pb-0">
+        <CardBody>
           <Chart {...chartConfig} />
         </CardBody>
       </Card>

@@ -8,8 +8,8 @@ import {
 
   const chartConfig = {
     type: "pie",
-    width: 400,
-    height: 400,
+    width: 200,
+    height: 200,
     series: [44, 55, 13, 43, 22],
     options: {
       chart: {
@@ -25,7 +25,7 @@ import {
       },
       colors: ["#020617", "#ff8f00", "#00897b", "#1e88e5", "#d81b60"],
       legend: {
-        show: true,
+        show: false,
       },
     },
   };
@@ -39,13 +39,11 @@ import {
           color="transparent"
           className=""
         >
-        <Typography variant="h3" color="white">
+        <h1 className="text-2xl text-cyan-200 font-bold">
           Spending Breakdown Report
-        </Typography>
+        </h1>
         </CardHeader>
-        <CardBody className="flex items-center justify-center">
           <Chart {...chartConfig} />
-        </CardBody>
       </Card>
     );
   }
