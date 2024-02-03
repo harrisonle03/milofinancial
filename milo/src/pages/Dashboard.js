@@ -11,10 +11,13 @@ export default function Dashboard() {
       <InfoCard title={'Expenses'} amount={90} change={-100} changePercentage={20} />
       <InfoCard title={'Income'} amount={100} change={23} changePercentage={20}/>
       <InfoCard title={'Balance'} amount={500} change={45} changePercentage={20}/>
+
       <div className="col-span-2">
         <LineChart/>
       </div>
+      
       <Breakdown />
+
     </div>
   )
 }
