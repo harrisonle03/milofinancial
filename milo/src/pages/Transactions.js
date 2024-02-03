@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
+import { Card } from "@material-tailwind/react"
 
 export default function Transactions() {
   const [data, setData] = useState([]);
   const [columnArray, setColumn] = useState([]);
   const [values, setValues] = useState([]);
-
   const handleFile = (event) => {
     Papa.parse(event.target.files[0], {
-      header: true,
+      header: false,
       skipEmptyLines: true,
       complete: function (result) {
-        const columnArray = Object.keys(result.data[0]);
         const valuesArray = result.data.map((d) => Object.values(d));
 
+        // Example: Provide your own column headers
+        const providedHeaders = ["Date", "Purchase", "Expense", "Income", "Balance"];
+        
+        // Use provided headers if they match the number of columns
+        const columnArray = providedHeaders.length === valuesArray[0].length
+          ? providedHeaders
+          : Array.from({ length: valuesArray[0].length }, (_, i) => `Column ${i + 1}`);
         setData(result.data);
         setColumn(columnArray);
         setValues(valuesArray);
@@ -22,7 +28,7 @@ export default function Transactions() {
   };
 
   return (
-    <div>
+    <Card className="h-[calc(100vh-2rem)] w-full max-w-[96rem] bg-[#1F2833]">
       <h1>Full Transaction History</h1>
       <input
         type="file"
@@ -52,6 +58,6 @@ export default function Transactions() {
           </tbody>
         </table>
       )}
-    </div>
+    </Card>
   );
 }

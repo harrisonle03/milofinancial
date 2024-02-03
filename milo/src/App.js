@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 import Home from "./pages/Home";
+import React, { createContext, useContext, useState } from 'react';
 import { ThemeProvider } from "@material-tailwind/react";
 
 function App() {
