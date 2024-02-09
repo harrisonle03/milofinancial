@@ -1,24 +1,41 @@
 import {
   Card,
-  CardHeader,
   CardBody,
 } from "@material-tailwind/react";
-import { useState } from "react"
+import React, { createContext, useState, useContext } from "react";
 import Papa from "papaparse"
  
 export default function Transaction() {
-    const [values, setValues] = useState([]);
-  
-    const handleFile = (event) => {
-      Papa.parse(event.target.files[0], {
-        header: false,
-        skipEmptyLines: true,
-        complete: function (result) {
-          const valuesArray = result.data.map((d) => Object.values(d));
-          setValues(valuesArray);
-        },
-      });
-    };
+  const [values, setValues] = useState([]);
+  const [thirdColumnTotal, setThirdColumnTotal] = useState(0);
+  const [fourthColumnTotal, setFourthColumnTotal] = useState(0);
+
+  const handleFile = (event) => {
+    Papa.parse(event.target.files[0], {
+      header: false,
+      skipEmptyLines: true,
+      complete: function (result) {
+        const valuesArray = result.data.map((d) => Object.values(d));
+        setValues(valuesArray);
+
+        // Sum up values in the third and fourth columns
+        const thirdColumnSum = valuesArray.reduce(
+          (acc, row) => acc + parseFloat(row[2] || 0),
+          0
+        );
+        const fourthColumnSum = valuesArray.reduce(
+          (acc, row) => acc + parseFloat(row[3] || 0),
+          0
+        );
+
+        // Set state variables and log them
+        setThirdColumnTotal(thirdColumnSum);
+        setFourthColumnTotal(fourthColumnSum);
+        console.log("Total Expenses:", thirdColumnSum);
+        console.log("Total Income:", fourthColumnSum);
+      },
+    });
+  };
 
   const TABLE_HEAD = ["Date", "Name", "Expense", "Income", "Balance"]
 
